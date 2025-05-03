@@ -13,15 +13,10 @@ node {
     }
 
     stage('Test image') {
-  
-        steps {
-            app.inside {
-                sh 'echo "Tests passed"'
-            }
-        }
-        post {
-            sh "Post !!!"
-        }
+        app.inside {
+            sh 'echo "Tests passed"'
+       }
+      
     }
 
     stage('Push image') {
